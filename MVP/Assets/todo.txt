@@ -1,0 +1,7 @@
+Player
+    Decide whether we should have a dynamic or kinematic control system https://www.youtube.com/watch?v=aM11L4egZcc
+    Dynamic pros: easier to code, fewer glitches
+    Kinematic pros: control over non-typical physics
+
+Scenes & Environment
+    Custom tileset with water that fits the size of the Tilemaps (@Ashby, r u interested in this)
