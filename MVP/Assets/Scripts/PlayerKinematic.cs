@@ -23,6 +23,11 @@ public class PlayerKinematic : MonoBehaviour
     public int defaultAdditionalJumps = 1;
     int additionalJumps;
 
+    private float fbInput;
+    private float lrInput;
+
+    Vector2 direction;
+
 
 
     void Start()
@@ -34,19 +39,46 @@ public class PlayerKinematic : MonoBehaviour
 
     void Update()
     {
-        Move();
+        direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        // fbInput = Input.GetAxis("Vertical") * speed;
+        // lrInput = Input.GetAxis("Horizontal") * speed;
+        // Move();
         Jump();
         BetterJump();
         CheckIfGrounded();
     }
 
+    void FixedUpdate(){
+        rb.MovePosition((Vector2)transform.position + (direction * speed * Time.fixedDeltaTime));
+    }
+
 
     void Move() {
-        float x = Input.GetAxisRaw("Horizontal");
+        // var bottomLeft = camera.ScreenToWorldPoint(Vector3.zero);
+        // var topRight =  camera.ScreenToWorldPoint(new Vector3(camera.pixelWidth, camera.pixelHeight));
 
-        float moveBy = x * speed;
+        // var cameraRect = new Rect(
+        //  bottomLeft.x,
+        //  bottomLeft.y,
+        //  topRight.x - bottomLeft.x,
+        //  topRight.y - bottomLeft.y);
 
-        rb.velocity = new Vector2(moveBy, rb.velocity.y);
+
+        //  transform.position = new Vector3(
+        //      Mathf.Clamp(transform.position.x, cameraRect .xMin, cameraRect .xMax),
+        //      Mathf.Clamp(transform.position.y, cameraRect .yMin, cameraRect .yMax),
+        //      transform.position.z);
+
+        // float x = Input.GetAxisRaw("Horizontal");
+
+        // float moveBy = x * speed;
+
+        // // rb.velocity = new Vector2(moveBy, rb.velocity.y);
+        // r.MovePosition(transform.position + x*speed);
+
+        rb.MovePosition(this.transform.position + this.transform.forward * fbInput * Time.fixedDeltaTime);
+
+        
     }
 
     void Jump() {
