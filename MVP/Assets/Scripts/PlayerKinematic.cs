@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerKinematic : MonoBehaviour
 {
@@ -23,13 +24,26 @@ public class PlayerKinematic : MonoBehaviour
     public int defaultAdditionalJumps = 1;
     int additionalJumps;
 
-
+    private int maxHealth;
+    private int health;
+    public int PlayerHealth{
+        get {return health;}
+        set
+        {
+            health = value;
+        }
+    }
+    public HealthBar healthBar;
+    public float timeSinceDamaged;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
         additionalJumps = defaultAdditionalJumps;
+
+        maxHealth = 10;
+        health = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     void Update()
@@ -38,6 +52,8 @@ public class PlayerKinematic : MonoBehaviour
         Jump();
         BetterJump();
         CheckIfGrounded();
+
+        //track time since damaged
     }
 
 
@@ -78,6 +94,12 @@ public class PlayerKinematic : MonoBehaviour
         }
     }
 
-  
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        healthBar.SetHealth(health);
+        timeSinceDamaged = 0;
+    }
 
 }
