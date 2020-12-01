@@ -12,10 +12,10 @@ public class PlayerKinematic : MonoBehaviour
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
 
-    bool isGrounded = false;
-    public Transform isGroundedChecker;
-    public float checkGroundRadius;
-    public LayerMask groundLayer;
+    // bool isGrounded = false;
+    // public Transform isGroundedChecker;
+    // public float checkGroundRadius;
+    // public LayerMask groundLayer;
 
     public float rememberGroundedFor;
     float lastTimeGrounded;
@@ -29,10 +29,16 @@ public class PlayerKinematic : MonoBehaviour
     Vector2 direction;
 
 
+    // private SphereCollider col;
+
+    // private Level2Behavior gameManager;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        // col = GetComponent<SphereCollider>();
+
+        // gameManager = GameObject.Find("Game Manager").GetComponent<Level2Behavior>();
 
         additionalJumps = defaultAdditionalJumps;
     }
@@ -42,15 +48,22 @@ public class PlayerKinematic : MonoBehaviour
         direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         // fbInput = Input.GetAxis("Vertical") * speed;
         // lrInput = Input.GetAxis("Horizontal") * speed;
-        // Move();
-        Jump();
-        BetterJump();
-        CheckIfGrounded();
+        // // Move();
+        // Jump();
+        // BetterJump();
+        // CheckIfGrounded();
     }
 
     void FixedUpdate(){
         rb.MovePosition((Vector2)transform.position + (direction * speed * Time.fixedDeltaTime));
     }
+
+    // void OnCollisionEnter(Collision collision)
+    // {
+    //     if(collision.gameObject.name == "acidic_mol"){
+    //         gameManager.HP -= 1;
+    //     }
+    // }
 
 
     void Move() {
@@ -81,34 +94,34 @@ public class PlayerKinematic : MonoBehaviour
         
     }
 
-    void Jump() {
-        if (Input.GetKeyDown(KeyCode.Space) && (isGrounded || Time.time - lastTimeGrounded <= rememberGroundedFor || additionalJumps > 0)) {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            additionalJumps--;
-        }
-    }
+    // void Jump() {
+    //     if (Input.GetKeyDown(KeyCode.Space) && (isGrounded || Time.time - lastTimeGrounded <= rememberGroundedFor || additionalJumps > 0)) {
+    //         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+    //         additionalJumps--;
+    //     }
+    // }
 
-    void BetterJump() {
-        if (rb.velocity.y < 0) {
-            rb.velocity += Vector2.up * Physics2D.gravity * (fallMultiplier - 1) * Time.deltaTime;
-        } else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.Space)) {
-            rb.velocity += Vector2.up * Physics2D.gravity * (lowJumpMultiplier - 1) * Time.deltaTime;
-        }
-    }
+    // void BetterJump() {
+    //     if (rb.velocity.y < 0) {
+    //         rb.velocity += Vector2.up * Physics2D.gravity * (fallMultiplier - 1) * Time.deltaTime;
+    //     } else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.Space)) {
+    //         rb.velocity += Vector2.up * Physics2D.gravity * (lowJumpMultiplier - 1) * Time.deltaTime;
+    //     }
+    // }
 
-    void CheckIfGrounded() {
-        Collider2D colliders = Physics2D.OverlapCircle(isGroundedChecker.position, checkGroundRadius, groundLayer);
+    // void CheckIfGrounded() {
+    //     Collider2D colliders = Physics2D.OverlapCircle(isGroundedChecker.position, checkGroundRadius, groundLayer);
 
-        if (colliders != null) {
-            isGrounded = true;
-            additionalJumps = defaultAdditionalJumps;
-        } else {
-            if (isGrounded) {
-                lastTimeGrounded = Time.time;
-            }
-            isGrounded = false;
-        }
-    }
+    //     if (colliders != null) {
+    //         isGrounded = true;
+    //         additionalJumps = defaultAdditionalJumps;
+    //     } else {
+    //         if (isGrounded) {
+    //             lastTimeGrounded = Time.time;
+    //         }
+    //         isGrounded = false;
+    //     }
+    // }
 
   
 

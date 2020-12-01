@@ -317,7 +317,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1509,11 +1509,6 @@ MonoBehaviour:
   jumpForce: 5
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
-  isGroundedChecker: {fileID: 1366895777}
-  checkGroundRadius: 0
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 0
   rememberGroundedFor: 0
   defaultAdditionalJumps: 0
 --- !u!50 &2003257253
