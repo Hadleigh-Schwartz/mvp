@@ -29,6 +29,7 @@ public class EnemyBehavior : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+      Debug.Log("hi2");
       Debug.Log("Hit: "+collision.gameObject.name);
       if(collision.gameObject.name == "Blast(Clone)")
       {
