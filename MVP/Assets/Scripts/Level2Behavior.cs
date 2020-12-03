@@ -7,30 +7,30 @@ public class Level2Behavior : MonoBehaviour
 {
     private uint _aquaHealth = 3;
     private uint _goalsCollected = 0;
-    public string labelText = "Collect the cyllinders and avoid the cubes!";
+    public string labelText = "Avoid the SO2 molecules!";
     public int maxGoals = 4;
     public bool showWinScreen = false;
     public bool showLoseScreen = false;
 
-    public uint GoalsCollected
-    {
-      get { return _goalsCollected; }
-      set
-      {
-        _goalsCollected = value;
-        if(_goalsCollected >= maxGoals)
-        {
-          labelText = "Congrats! You collected all the goals";
-          showWinScreen = true;
-          Time.timeScale = 0f;
-        }
-        else
-        {
-          labelText = "Goal found, only "+(maxGoals-_goalsCollected)+" more to go!";
-        }
-        Debug.LogFormat("Goals: {0}", _goalsCollected);
-      }
-    }
+    // public uint GoalsCollected
+    // {
+    //   get { return _goalsCollected; }
+    //   set
+    //   {
+    //     _goalsCollected = value;
+    //     if(_goalsCollected >= maxGoals)
+    //     {
+    //       labelText = "Congrats! You collected all the goals";
+    //       showWinScreen = true;
+    //       Time.timeScale = 0f;
+    //     }
+    //     else
+    //     {
+    //       labelText = "Goal found, only "+(maxGoals-_goalsCollected)+" more to go!";
+    //     }
+    //     Debug.LogFormat("Goals: {0}", _goalsCollected);
+    //   }
+    // }
 
     public uint HP
     {
@@ -77,7 +77,7 @@ public class Level2Behavior : MonoBehaviour
     void OnGUI()
     {
       GUI.Box(new Rect(20,20,150,25), "Player Health: "+_aquaHealth);
-      GUI.Box(new Rect(20,50,150,25), "Goals Collected: "+_goalsCollected);
+      // GUI.Box(new Rect(20,50,150,25), "Goals Collected: "+_goalsCollected);
       GUI.Label(new Rect(Screen.width/2 - 100, Screen.height - 50, 300, 50),
         labelText);
       if(showWinScreen)
