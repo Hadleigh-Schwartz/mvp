@@ -1,3 +1,8 @@
+//Troubleshooting
+//1. Make sure it's all Collider2D, not Collider
+//2. Make sure this script is in an Empty as a child of the NPC, along with a collider2D that is marked "IsTrigger"
+//3. Make sure the player's tag is "Player"
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
