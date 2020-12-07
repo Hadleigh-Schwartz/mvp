@@ -29,8 +29,12 @@ public class PlayerKinematic : MonoBehaviour
     Vector2 direction;
 
     public bool isEvaporating = false;
+    public bool isCondensing = false;
+
     float accum = 0.0f;
-    Vector2 startPos, endPos;
+
+    Vector2 startEvapPos, endEvapPos;
+    Vector2 startCondPos, endCondPos;
 
     float currentLerpTime;
     float lerpTime = 2f;
@@ -92,7 +96,22 @@ public class PlayerKinematic : MonoBehaviour
  
              //lerp
              float percentComplete = currentLerpTime / lerpTime;
-             rb.MovePosition(Vector3.Lerp(startPos, endPos, percentComplete));
+             rb.MovePosition(Vector3.Lerp(startEvapPos, endEvapPos, percentComplete));
+         }
+
+         if (isCondensing)
+         {
+             //increment timer once per frame
+             currentLerpTime += Time.deltaTime;
+             if (currentLerpTime > lerpTime)
+             {
+                 currentLerpTime = lerpTime;
+                 isCondensing = false;
+             }
+ 
+             //lerp
+             float percentComplete = currentLerpTime / lerpTime;
+             rb.MovePosition(Vector3.Lerp(startCondPos, endCondPos, percentComplete));
          }
         
 
@@ -150,18 +169,34 @@ public class PlayerKinematic : MonoBehaviour
     //     }
     // }
 
-    void CheckIfGrounded() {
-        Collider2D colliders = Physics2D.OverlapCircle(isGroundedChecker.position, checkGroundRadius, groundLayer);
+    // void CheckIfGrounded() {
+    //     Collider2D colliders = Physics2D.OverlapCircle(isGroundedChecker.position, checkGroundRadius, groundLayer);
 
-        if (colliders != null) {
-            isGrounded = true;
-            additionalJumps = defaultAdditionalJumps;
-        } else {
-            if (isGrounded) {
-                lastTimeGrounded = Time.time;
-            }
-            isGrounded = false;
+    //     if (colliders != null) {
+    //         isGrounded = true;
+    //         additionalJumps = defaultAdditionalJumps;
+    //     } else {
+    //         if (isGrounded) {
+    //             lastTimeGrounded = Time.time;
+    //         }
+    //         isGrounded = false;
+    //     }
+    // }
+
+    public void startCondense(){
+        if (gameManager.state != "gas"){
+            Debug.Log("Error!");
+            gameManager.showErrorScreen = true;
         }
+        else
+        {
+            gameManager.state = "liquid";
+            startCondPos = transform.position;
+            endCondPos = new Vector2(transform.position.x, -10);
+            isCondensing = true;
+            currentLerpTime = 0f; 
+        }
+       
     }
 
 
@@ -172,8 +207,9 @@ public class PlayerKinematic : MonoBehaviour
         }
         else
         {
-            startPos = transform.position;
-            endPos = new Vector2(transform.position.x, 18);
+            gameManager.state = "gas";
+            startEvapPos = transform.position;
+            endEvapPos = new Vector2(transform.position.x, 18);
             isEvaporating = true;
             currentLerpTime = 0f; 
         }

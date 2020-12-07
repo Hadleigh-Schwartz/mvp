@@ -26,13 +26,17 @@ public class StateManager : MonoBehaviour
      //        print("pressed");
  
      //    }
-    if(showErrorScreen == true){
-	    if(GUI.Button(new Rect(Screen.width/2 -100, Screen.height/2-50,200,100), "YOU WON!"))
-	    {
-	        Destroy(this);
-	        // Time.timeScale = 1.0f;
-	    }
-	 }
+    	
+	    if(showErrorScreen == true){
+		    if(GUI.Button(new Rect(Screen.width/2 -100, Screen.height/2-50,200,100), "YOU WON!"))
+		    {
+		    	// yield return new WaitForSeconds(5);
+		    	// showErrorSc
+		        //Destroy(errorBox);
+		        // Time.timeScale = 1.0f;
+		        showErrorScreen = false;
+		    }
+		 }
 	  
     
       
