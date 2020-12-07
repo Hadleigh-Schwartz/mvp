@@ -12,10 +12,10 @@ public class PlayerKinematic : MonoBehaviour
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
 
-    // bool isGrounded = false;
-    // public Transform isGroundedChecker;
-    // public float checkGroundRadius;
-    // public LayerMask groundLayer;
+    bool isGrounded = false;
+    public Transform isGroundedChecker;
+    public float checkGroundRadius;
+    public LayerMask groundLayer;
 
     public float rememberGroundedFor;
     float lastTimeGrounded;
@@ -28,7 +28,12 @@ public class PlayerKinematic : MonoBehaviour
 
     Vector2 direction;
 
+    public bool isLerping = false;
+    float accum = 0.0f;
+    Vector2 startPos, endPos;
 
+    float currentLerpTime;
+    float lerpTime = 2f;
     // private SphereCollider col;
 
     // private Level2Behavior gameManager;
@@ -40,22 +45,53 @@ public class PlayerKinematic : MonoBehaviour
 
         // gameManager = GameObject.Find("Game Manager").GetComponent<Level2Behavior>();
 
+    
+
         additionalJumps = defaultAdditionalJumps;
     }
 
     void Update()
     {
-        direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        direction = new Vector2(Input.GetAxis("Horizontal"), 0);
         // fbInput = Input.GetAxis("Vertical") * speed;
         // lrInput = Input.GetAxis("Horizontal") * speed;
         // // Move();
         // Jump();
         // BetterJump();
         // CheckIfGrounded();
+
+        // if (p1 == p2){
+        //     isLerping = false;
+        //     Debug.Log("done lerping");
+        // }
+
+        // if (isLerping){
+        //     accum += 1.1f * Time.deltaTime;
+        //     this.transform.position = Vector2.Lerp(p1,p2, Mathf.SmoothStep(0,1,accum));
+        // }
     }
 
     void FixedUpdate(){
         rb.MovePosition((Vector2)transform.position + (direction * speed * Time.fixedDeltaTime));
+
+
+        if (isLerping)
+         {
+             //increment timer once per frame
+             currentLerpTime += Time.deltaTime;
+             if (currentLerpTime > lerpTime)
+             {
+                 currentLerpTime = lerpTime;
+                 isLerping = false;
+             }
+ 
+             //lerp
+             float percentComplete = currentLerpTime / lerpTime;
+             rb.MovePosition(Vector3.Lerp(startPos, endPos, percentComplete));
+         }
+        
+
+
     }
 
     // void OnCollisionEnter(Collision collision)
@@ -109,20 +145,28 @@ public class PlayerKinematic : MonoBehaviour
     //     }
     // }
 
-    // void CheckIfGrounded() {
-    //     Collider2D colliders = Physics2D.OverlapCircle(isGroundedChecker.position, checkGroundRadius, groundLayer);
+    void CheckIfGrounded() {
+        Collider2D colliders = Physics2D.OverlapCircle(isGroundedChecker.position, checkGroundRadius, groundLayer);
 
-    //     if (colliders != null) {
-    //         isGrounded = true;
-    //         additionalJumps = defaultAdditionalJumps;
-    //     } else {
-    //         if (isGrounded) {
-    //             lastTimeGrounded = Time.time;
-    //         }
-    //         isGrounded = false;
-    //     }
-    // }
+        if (colliders != null) {
+            isGrounded = true;
+            additionalJumps = defaultAdditionalJumps;
+        } else {
+            if (isGrounded) {
+                lastTimeGrounded = Time.time;
+            }
+            isGrounded = false;
+        }
+    }
 
-  
+
+    public void startLerp(){
+        startPos = transform.position;
+        endPos = new Vector2(transform.position.x, 18);
+        isLerping = true;
+        currentLerpTime = 0f;
+    }
+
+
 
 }
