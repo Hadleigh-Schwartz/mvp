@@ -60,7 +60,7 @@ public class NPC : MonoBehaviour
             OpenDialogue();
             //SwitchCameras(firstPersonCamera, NPCCamera);
         }
-        if(usingNPC == true && Input.GetKeyDown(KeyCode.Escape))
+        if(usingNPC == true && playerInRange == false)
         {
             showDialogue = false;
             //SwitchCameras(NPCCamera, firstPersonCamera);
