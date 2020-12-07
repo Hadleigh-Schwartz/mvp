@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class StateManager : MonoBehaviour
 {
+
 	public string state = "liquid";
 
     public bool showErrorScreen = false;
@@ -26,61 +27,34 @@ public class StateManager : MonoBehaviour
      //        print("pressed");
  
      //    }
-    	
-	    if(showErrorScreen == true){
-		    if(GUI.Button(new Rect(Screen.width/2 -100, Screen.height/2-50,200,100), "YOU WON!"))
-		    {
-		    	// yield return new WaitForSeconds(5);
-		    	// showErrorSc
-		        //Destroy(errorBox);
-		        // Time.timeScale = 1.0f;
-		        showErrorScreen = false;
-		    }
-		 }
+    	if(showErrorScreen == true){
+    		if(state == "liquid"){
+			    if(GUI.Button(new Rect(Screen.width/2 -100, Screen.height/2-50,360,100), "You must be a gas to condense! Click here to continue"))
+			    {
+			    	// yield return new WaitForSeconds(5);
+			    	// showErrorSc
+			        //Destroy(errorBox);
+			        // Time.timeScale = 1.0f;
+			        showErrorScreen = false;
+			    }
+		 	}
+
+		 	if(state == "gas"){
+			    if(GUI.Button(new Rect(Screen.width/2 -100, Screen.height/2-50,360,100), "You must be a liquid to evaporate! Click here to continue"))
+			    {
+			    	// yield return new WaitForSeconds(5);
+			    	// showErrorSc
+			        //Destroy(errorBox);
+			        // Time.timeScale = 1.0f;
+			        showErrorScreen = false;
+			    }
+		 	}
+
+		}
+	}
 	  
-    
-      
-
-      
-      // if(showWinScreen)
-      // {
-      //   if(GUI.Button(new Rect(Screen.width/2 -100, Screen.height/2-50,200,100), "YOU WON!"))
-      //   {
-      //       SceneManager.LoadScene(0);
-      //       Time.timeScale = 1.0f;
-      //   }
-      // }
-      // if(showErrorScreen)
-      // {
-      //   if(GUI.Button(new Rect(Screen.width/2 -100, Screen.height/2-50,200,100), "YOU DIED! GAME OVER"))
-      //   {
-      //     SceneManager.LoadScene(0);
-      //     Time.timeScale = 1.0f;
-      //   }
-      // }
-
-      // if(showErrorScreen)
-      // {
-     	// GUI.Box(new Rect(Screen.width/2 -100, Screen.height/2-50,200,40), "INCORRECT STATE CHANGE"); 
-      // }
-
-     }
-
-    // public void Message(float startTime){
-    // 	displayMessage = true;
-    // 	if (displayMessage) {
-    //     if ((Time.time - startTime) < displayTime) {
-    //         GUI.Label (new Rect (Screen.width/2,Screen.height/2,120,50), "Message goes here");
-    //     } else {
-    //         displayMessage = false;
-    //     }
-    // 	}
-    // }
-
-
-     
-    
-
+	  
+  
     // Start is called before the first frame update
     void Start()
     {
