@@ -28,12 +28,17 @@ public class PlayerKinematic : MonoBehaviour
 
     Vector2 direction;
 
-    public bool isLerping = false;
+    public bool isEvaporating = false;
     float accum = 0.0f;
     Vector2 startPos, endPos;
 
     float currentLerpTime;
     float lerpTime = 2f;
+
+    public StateManager gameManager;
+
+ 
+     
     // private SphereCollider col;
 
     // private Level2Behavior gameManager;
@@ -43,7 +48,7 @@ public class PlayerKinematic : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         // col = GetComponent<SphereCollider>();
 
-        // gameManager = GameObject.Find("Game Manager").GetComponent<Level2Behavior>();
+        gameManager = GameObject.Find("GameManager").GetComponent<StateManager>();
 
     
 
@@ -75,14 +80,14 @@ public class PlayerKinematic : MonoBehaviour
         rb.MovePosition((Vector2)transform.position + (direction * speed * Time.fixedDeltaTime));
 
 
-        if (isLerping)
+        if (isEvaporating)
          {
              //increment timer once per frame
              currentLerpTime += Time.deltaTime;
              if (currentLerpTime > lerpTime)
              {
                  currentLerpTime = lerpTime;
-                 isLerping = false;
+                 isEvaporating = false;
              }
  
              //lerp
@@ -160,11 +165,19 @@ public class PlayerKinematic : MonoBehaviour
     }
 
 
-    public void startLerp(){
-        startPos = transform.position;
-        endPos = new Vector2(transform.position.x, 18);
-        isLerping = true;
-        currentLerpTime = 0f;
+    public void startEvaporate(){
+        if (gameManager.state != "liquid"){
+            Debug.Log("Error!");
+            gameManager.showErrorScreen = true;
+        }
+        else
+        {
+            startPos = transform.position;
+            endPos = new Vector2(transform.position.x, 18);
+            isEvaporating = true;
+            currentLerpTime = 0f; 
+        }
+       
     }
 
 
