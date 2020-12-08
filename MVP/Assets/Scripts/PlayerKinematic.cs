@@ -17,22 +17,26 @@ public class PlayerKinematic : MonoBehaviour
     // public float checkGroundRadius;
     // public LayerMask groundLayer;
 
-    public float rememberGroundedFor;
-    float lastTimeGrounded;
+    // public float rememberGroundedFor;
+    // float lastTimeGrounded;
+    //
+    // public int defaultAdditionalJumps = 1;
+    // int additionalJumps;
 
-    public int defaultAdditionalJumps = 1;
-    int additionalJumps;
-
-    private float fbInput;
+    private float fbInput = 1;
     private float lrInput;
 
     Vector2 direction;
 
+    private Inventory inventory;
 
     // private SphereCollider col;
 
     // private Level2Behavior gameManager;
-
+    void Awake()
+    {
+        inventory = new Inventory();
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -40,7 +44,7 @@ public class PlayerKinematic : MonoBehaviour
 
         // gameManager = GameObject.Find("Game Manager").GetComponent<Level2Behavior>();
 
-        additionalJumps = defaultAdditionalJumps;
+        //additionalJumps = defaultAdditionalJumps;
     }
 
     void Update()
@@ -91,7 +95,7 @@ public class PlayerKinematic : MonoBehaviour
 
         rb.MovePosition(this.transform.position + this.transform.forward * fbInput * Time.fixedDeltaTime);
 
-        
+
     }
 
     // void Jump() {
@@ -123,6 +127,15 @@ public class PlayerKinematic : MonoBehaviour
     //     }
     // }
 
-  
+    // public void OnTriggerEnter2D(Collider2D collision)
+    // {
+    //     var item = collision.GetComponent<Item>();
+    //     if(item)
+    //     {
+    //         inventory.AddItem(item, 1);
+    //         Destroy(collision.gameObject);
+    //     }
+    //     Debug.Log(item);
+    // }
 
 }
