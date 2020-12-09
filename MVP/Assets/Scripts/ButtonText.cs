@@ -6,11 +6,16 @@ using UnityEngine.UI;
 public class ButtonText : MonoBehaviour
 {
     public Text textField;
+    public string textStr;
     public void SetText(string txt)
     {
-      if(textField.text == "")
+      textStr += txt;
+    }
+    public void ShowHideText()
+    {
+      if(textField.text != textStr)
       {
-        textField.text = txt;
+        textField.text = textStr;
       }
       else
       {

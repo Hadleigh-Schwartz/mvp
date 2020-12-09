@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8054494510313247312}
   - component: {fileID: 2913364501996235863}
   - component: {fileID: 1988169508741465985}
+  - component: {fileID: 4767839237938229439}
   m_Layer: 5
   m_Name: WaterSampleButton
   m_TagString: Untagged
@@ -119,7 +120,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2913364501996235863}
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
@@ -142,4 +143,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffcc0ee0b0e66420089f2150187128d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yourButton: {fileID: 0}
   showPollutionGUI: 0
+--- !u!114 &4767839237938229439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091083986737417672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74712f310f4e84916aa247ce14f48881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textField: {fileID: 0}
