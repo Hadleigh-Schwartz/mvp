@@ -5,32 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Level2Behavior : MonoBehaviour
 {
-    private uint _aquaHealth = 3;
-    private uint _goalsCollected = 0;
+    private uint _aquaHealth = 5;
+
     public string labelText = "Avoid the SO2 molecules!";
-    public int maxGoals = 4;
+
     public bool showWinScreen = false;
     public bool showLoseScreen = false;
 
-    // public uint GoalsCollected
-    // {
-    //   get { return _goalsCollected; }
-    //   set
-    //   {
-    //     _goalsCollected = value;
-    //     if(_goalsCollected >= maxGoals)
-    //     {
-    //       labelText = "Congrats! You collected all the goals";
-    //       showWinScreen = true;
-    //       Time.timeScale = 0f;
-    //     }
-    //     else
-    //     {
-    //       labelText = "Goal found, only "+(maxGoals-_goalsCollected)+" more to go!";
-    //     }
-    //     Debug.LogFormat("Goals: {0}", _goalsCollected);
-    //   }
-    // }
 
     public uint HP
     {
@@ -97,6 +78,7 @@ public class Level2Behavior : MonoBehaviour
         }
       }
     }
+
     // Start is called before the first frame update
     void Start()
     {
