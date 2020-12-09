@@ -51,6 +51,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< Updated upstream
     width: 1680
 <<<<<<< HEAD
     height: 941
@@ -59,6 +60,11 @@ MonoBehaviour:
     height: 938
   m_MinSize: {x: 875, y: 542}
 >>>>>>> parent of 05fd90d... Some Level 1 work
+=======
+    width: 1920
+    height: 997
+  m_MinSize: {x: 875, y: 542}
+>>>>>>> Stashed changes
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -126,6 +132,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< Updated upstream
     width: 1680
 <<<<<<< HEAD
     height: 891
@@ -140,6 +147,14 @@ MonoBehaviour:
   vertical: 0
   controlID: 64
 >>>>>>> parent of 05fd90d... Some Level 1 work
+=======
+    width: 1920
+    height: 947
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
+  vertical: 0
+  controlID: 80
+>>>>>>> Stashed changes
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -159,6 +174,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< Updated upstream
     width: 1137
 <<<<<<< HEAD
     height: 891
@@ -173,6 +189,14 @@ MonoBehaviour:
   vertical: 1
   controlID: 65
 >>>>>>> parent of 05fd90d... Some Level 1 work
+=======
+    width: 1299
+    height: 947
+  m_MinSize: {x: 403, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
+  vertical: 1
+  controlID: 81
+>>>>>>> Stashed changes
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -192,6 +216,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< Updated upstream
     width: 1137
 <<<<<<< HEAD
     height: 619
@@ -206,6 +231,14 @@ MonoBehaviour:
   vertical: 0
   controlID: 66
 >>>>>>> parent of 05fd90d... Some Level 1 work
+=======
+    width: 1299
+    height: 658
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
+  vertical: 0
+  controlID: 82
+>>>>>>> Stashed changes
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,6 +256,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     width: 200
     height: 619
@@ -234,6 +268,12 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
 >>>>>>> parent of 05fd90d... Some Level 1 work
+=======
+    width: 201
+    height: 658
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+>>>>>>> Stashed changes
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -290,6 +330,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     y: 619
     width: 1137
@@ -299,6 +340,11 @@ MonoBehaviour:
     width: 1137
     height: 271
 >>>>>>> parent of 05fd90d... Some Level 1 work
+=======
+    y: 658
+    width: 1299
+    height: 289
+>>>>>>> Stashed changes
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 16}
@@ -324,6 +370,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1137
     y: 0
+<<<<<<< Updated upstream
     width: 543
 <<<<<<< HEAD
     height: 891
@@ -334,6 +381,12 @@ MonoBehaviour:
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
 >>>>>>> parent of 05fd90d... Some Level 1 work
+=======
+    width: 621
+    height: 947
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+>>>>>>> Stashed changes
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -516,11 +569,18 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
+<<<<<<< Updated upstream
       scrollPos: {x: 0, y: 32}
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: bc61ffffe073ffff7686ffff9086ffff22eeffff08f0ffff4efbffff50fbffffb0470000de4d0000c25200000c530000
 >>>>>>> parent of 05fd90d... Some Level 1 work
+=======
+      scrollPos: {x: 0, y: 16}
+      m_SelectedIDs: e2470000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 54faffff143b0000
+>>>>>>> Stashed changes
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -604,6 +664,7 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     m_HBaseRangeMin: -233.75
     m_HBaseRangeMax: 233.75
@@ -615,6 +676,12 @@ MonoBehaviour:
     m_VBaseRangeMin: -131.25
     m_VBaseRangeMax: 131.25
 >>>>>>> parent of 05fd90d... Some Level 1 work
+=======
+    m_HBaseRangeMin: -548
+    m_HBaseRangeMax: 548
+    m_VBaseRangeMin: -308
+    m_VBaseRangeMax: 308
+>>>>>>> Stashed changes
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -631,6 +698,7 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
+<<<<<<< Updated upstream
       y: 21
 <<<<<<< HEAD
       width: 935
@@ -643,17 +711,31 @@ MonoBehaviour:
     m_Scale: {x: 2, y: 2}
     m_Translation: {x: 467, y: 287.5}
 >>>>>>> parent of 05fd90d... Some Level 1 work
+=======
+      y: 0
+      width: 1096
+      height: 637
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 548, y: 318.5}
+>>>>>>> Stashed changes
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       x: -233.75
       y: -144.25
       width: 467.5
       height: 288.5
+=======
+      x: -548
+      y: -318.5
+      width: 1096
+      height: 637
+>>>>>>> Stashed changes
     m_MinimalGUI: 1
   m_defaultScale: 2
   m_LastWindowPixelSize: {x: 1870, y: 1196}
@@ -743,11 +825,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/pookiewife/Desktop/mvp/MVP
   m_LockTracker:
@@ -755,6 +837,7 @@ MonoBehaviour:
   m_FolderTreeState:
 <<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
+<<<<<<< Updated upstream
     m_SelectedIDs: f23d0000
     m_LastClickedID: 15858
     m_ExpandedIDs: 00000000d43d000000ca9a3b
@@ -764,6 +847,11 @@ MonoBehaviour:
     m_LastClickedID: 16186
     m_ExpandedIDs: 000000000e3f0000283f000000ca9a3b
 >>>>>>> parent of 05fd90d... Some Level 1 work
+=======
+    m_SelectedIDs: 2a400000
+    m_LastClickedID: 16426
+    m_ExpandedIDs: 000000000040000000ca9a3b
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -791,11 +879,15 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     m_ExpandedIDs: 00000000d43d0000
 =======
     m_ExpandedIDs: 000000000e3f0000
 >>>>>>> parent of 05fd90d... Some Level 1 work
+=======
+    m_ExpandedIDs: 0000000000400000
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
