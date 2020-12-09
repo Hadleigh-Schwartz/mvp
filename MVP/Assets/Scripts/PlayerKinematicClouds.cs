@@ -31,11 +31,7 @@ public class PlayerKinematicClouds : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        // col = GetComponent<SphereCollider>();
-
-        gameManager = GameObject.Find("GameManager").GetComponent<StateManager>();
-
-    
+        // col = GetComponent<SphereCollider>();    
     }
 
     void Update()
