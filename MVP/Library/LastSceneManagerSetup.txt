@@ -4,6 +4,14 @@ sceneSetups:
   isActive: 1
   isSubScene: 0
 - path: Assets/Scenes/level2-cloud.unity
+<<<<<<< HEAD
   isLoaded: 1
+=======
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/level2-cloud-intro.unity
+  isLoaded: 0
+>>>>>>> parent of 05fd90d... Some Level 1 work
   isActive: 0
   isSubScene: 0

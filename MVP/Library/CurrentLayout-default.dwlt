@@ -14,14 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
+<<<<<<< HEAD
     x: -1
     y: 45
     width: 1680
     height: 941
+=======
+    x: 0
+    y: 45
+    width: 1680
+    height: 938
+>>>>>>> parent of 05fd90d... Some Level 1 work
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -45,8 +52,13 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1680
+<<<<<<< HEAD
     height: 941
   m_MinSize: {x: 875, y: 300}
+=======
+    height: 938
+  m_MinSize: {x: 875, y: 542}
+>>>>>>> parent of 05fd90d... Some Level 1 work
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -86,7 +98,11 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 921
+=======
+    y: 918
+>>>>>>> parent of 05fd90d... Some Level 1 work
     width: 1680
     height: 20
   m_MinSize: {x: 0, y: 0}
@@ -111,11 +127,19 @@ MonoBehaviour:
     x: 0
     y: 30
     width: 1680
+<<<<<<< HEAD
     height: 891
   m_MinSize: {x: 678, y: 492}
   m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
   controlID: 129
+=======
+    height: 888
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
+  vertical: 0
+  controlID: 64
+>>>>>>> parent of 05fd90d... Some Level 1 work
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,11 +160,19 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1137
+<<<<<<< HEAD
     height: 891
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
   controlID: 100
+=======
+    height: 888
+  m_MinSize: {x: 403, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
+  vertical: 1
+  controlID: 65
+>>>>>>> parent of 05fd90d... Some Level 1 work
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -161,11 +193,19 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1137
+<<<<<<< HEAD
     height: 619
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
   controlID: 101
+=======
+    height: 617
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
+  vertical: 0
+  controlID: 66
+>>>>>>> parent of 05fd90d... Some Level 1 work
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -183,10 +223,17 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 200
     height: 619
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+    width: 201
+    height: 617
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+>>>>>>> parent of 05fd90d... Some Level 1 work
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -207,10 +254,17 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 200
     y: 0
     width: 937
     height: 619
+=======
+    x: 201
+    y: 0
+    width: 936
+    height: 617
+>>>>>>> parent of 05fd90d... Some Level 1 work
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 12}
@@ -236,9 +290,15 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 619
     width: 1137
     height: 272
+=======
+    y: 617
+    width: 1137
+    height: 271
+>>>>>>> parent of 05fd90d... Some Level 1 work
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 16}
@@ -265,9 +325,15 @@ MonoBehaviour:
     x: 1137
     y: 0
     width: 543
+<<<<<<< HEAD
     height: 891
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+    height: 888
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+>>>>>>> parent of 05fd90d... Some Level 1 work
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -296,10 +362,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 199
     y: 75
     width: 935
     height: 598
+=======
+    x: 201
+    y: 75
+    width: 934
+    height: 596
+>>>>>>> parent of 05fd90d... Some Level 1 work
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: d69a67902db7f994ca099bec79d22ce1
@@ -311,9 +384,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 78.2941, y: 8.811323, z: -60.90273}
     speed: 2
     m_Value: {x: 78.2941, y: 8.811323, z: -60.90273}
+=======
+    m_Target: {x: 2.0252495, y: 1.1389798, z: -839.5862}
+    speed: 2
+    m_Value: {x: 2.0252495, y: 1.1389798, z: -839.5862}
+>>>>>>> parent of 05fd90d... Some Level 1 work
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -363,9 +442,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 58.4737
     speed: 2
     m_Value: 58.4737
+=======
+    m_Target: 34.23099
+    speed: 2
+    m_Value: 33.92566
+>>>>>>> parent of 05fd90d... Some Level 1 work
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -411,6 +496,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: -1
     y: 75
     width: 199
@@ -422,6 +508,19 @@ MonoBehaviour:
       m_SelectedIDs: 0cd4ffff
       m_LastClickedID: -11252
       m_ExpandedIDs: 0cdaffff90dbffff9cdbffffbef3ffff5afbffff
+=======
+    x: 0
+    y: 75
+    width: 200
+    height: 596
+  m_ViewDataDictionary: {fileID: 0}
+  m_SceneHierarchy:
+    m_TreeViewState:
+      scrollPos: {x: 0, y: 32}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: bc61ffffe073ffff7686ffff9086ffff22eeffff08f0ffff4efbffff50fbffffb0470000de4d0000c25200000c530000
+>>>>>>> parent of 05fd90d... Some Level 1 work
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -466,10 +565,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 199
     y: 75
     width: 935
     height: 598
+=======
+    x: 201
+    y: 75
+    width: 934
+    height: 596
+>>>>>>> parent of 05fd90d... Some Level 1 work
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -479,7 +585,11 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+<<<<<<< HEAD
   m_TargetSize: {x: 935, y: 526}
+=======
+  m_TargetSize: {x: 934, y: 525}
+>>>>>>> parent of 05fd90d... Some Level 1 work
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -494,10 +604,17 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -233.75
     m_HBaseRangeMax: 233.75
     m_VBaseRangeMin: -131.5
     m_VBaseRangeMax: 131.5
+=======
+    m_HBaseRangeMin: -233.5
+    m_HBaseRangeMax: 233.5
+    m_VBaseRangeMin: -131.25
+    m_VBaseRangeMax: 131.25
+>>>>>>> parent of 05fd90d... Some Level 1 work
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -515,16 +632,24 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
+<<<<<<< HEAD
       width: 935
       height: 577
     m_Scale: {x: 2, y: 2}
     m_Translation: {x: 467.5, y: 288.5}
+=======
+      width: 934
+      height: 575
+    m_Scale: {x: 2, y: 2}
+    m_Translation: {x: 467, y: 287.5}
+>>>>>>> parent of 05fd90d... Some Level 1 work
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -233.75
       y: -144.25
       width: 467.5
@@ -532,6 +657,15 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 2
   m_LastWindowPixelSize: {x: 1870, y: 1196}
+=======
+      x: -233.5
+      y: -143.75
+      width: 467
+      height: 287.5
+    m_MinimalGUI: 1
+  m_defaultScale: 2
+  m_LastWindowPixelSize: {x: 1868, y: 1192}
+>>>>>>> parent of 05fd90d... Some Level 1 work
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -584,10 +718,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: -1
     y: 694
     width: 1136
     height: 251
+=======
+    x: 0
+    y: 692
+    width: 1136
+    height: 250
+>>>>>>> parent of 05fd90d... Some Level 1 work
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -612,10 +753,17 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: f23d0000
     m_LastClickedID: 15858
     m_ExpandedIDs: 00000000d43d000000ca9a3b
+=======
+    scrollPos: {x: 0, y: 62}
+    m_SelectedIDs: 3a3f0000
+    m_LastClickedID: 16186
+    m_ExpandedIDs: 000000000e3f0000283f000000ca9a3b
+>>>>>>> parent of 05fd90d... Some Level 1 work
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -643,7 +791,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000d43d0000
+=======
+    m_ExpandedIDs: 000000000e3f0000
+>>>>>>> parent of 05fd90d... Some Level 1 work
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -720,10 +872,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: -1
     y: 694
     width: 1136
     height: 251
+=======
+    x: 0
+    y: 692
+    width: 1136
+    height: 250
+>>>>>>> parent of 05fd90d... Some Level 1 work
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &18
 MonoBehaviour:
@@ -746,10 +905,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1136
     y: 75
     width: 542
     height: 870
+=======
+    x: 1137
+    y: 75
+    width: 542
+    height: 867
+>>>>>>> parent of 05fd90d... Some Level 1 work
   m_ViewDataDictionary: {fileID: 0}
   m_OpenAddComponentMenu: 0
   m_ObjectsLockedBeforeSerialization: []
