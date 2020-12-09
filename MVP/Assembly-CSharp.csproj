@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\Free Asset - 2D Handcrafted Art\Scripts\CamerController.cs" />
      <Compile Include="Assets\OscillateX.cs" />
+     <Compile Include="Assets\Scripts\ButtonText.cs" />
      <Compile Include="Assets\Scripts\EnemyBehavior.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
