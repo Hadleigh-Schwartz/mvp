@@ -1,21 +1,25 @@
 sceneSetups:
 - path: Assets/Scenes/level2-cloud.unity
-  isLoaded: 0
+  isLoaded: 1
   isActive: 0
   isSubScene: 0
 - path: Assets/Scenes/Home.unity
   isLoaded: 1
-  isActive: 1
-  isSubScene: 0
-- path: Assets/Scenes/level1-puddle.unity
-  isLoaded: 0
   isActive: 0
   isSubScene: 0
+- path: Assets/Scenes/level1-puddle.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
 - path: Assets/Scenes/level2-cloud-finish.unity
-  isLoaded: 0
+  isLoaded: 1
   isActive: 0
   isSubScene: 0
 - path: Assets/Scenes/level2-cloud-intro.unity
-  isLoaded: 0
+  isLoaded: 1
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/level3.unity
+  isLoaded: 1
   isActive: 0
   isSubScene: 0
