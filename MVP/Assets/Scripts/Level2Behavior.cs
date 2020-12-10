@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Level2Behavior : MonoBehaviour
 {
-    private uint _aquaHealth = 5;
+    private uint _aquaHealth = 3;
 
     public string labelText = "Avoid the SO2 molecules and get to the finish line!";
 
@@ -83,7 +83,7 @@ public class Level2Behavior : MonoBehaviour
       {
         if(GUI.Button(new Rect(Screen.width/2 -100, Screen.height/2-50,200,100), "YOU DIED! GAME OVER"))
         {
-          SceneManager.LoadScene(0);
+          SceneManager.LoadScene("level2-cloud");
           Time.timeScale = 1.0f;
         }
       }

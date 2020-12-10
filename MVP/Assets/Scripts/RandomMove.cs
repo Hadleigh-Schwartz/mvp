@@ -7,7 +7,7 @@ public class RandomMove : MonoBehaviour
 
     private float latestDirectionChangeTime;
     private readonly float directionChangeTime = 3f;
-    private float characterVelocity = 7f;
+    private float characterVelocity = 12f;
     private Vector2 movementDirection;
     private Vector2 movementPerSecond;
      
