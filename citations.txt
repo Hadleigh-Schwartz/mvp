@@ -1,4 +1,9 @@
 Unity Assets:
+https://assetstore.unity.com/packages/2d/environments/free-asset-2d-handcrafted-art-117049
+
+https://assetstore.unity.com/packages/2d/environments/free-2d-adventure-beach-background-82090
+
+https://assetstore.unity.com/packages/2d/textures-materials/nature/magic-cliffs-pixel-art-environment-60458
 
 
 
