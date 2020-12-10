@@ -12,7 +12,10 @@ public class Level2Behavior : MonoBehaviour
     public bool showWinScreen = false;
     public bool showLoseScreen = false;
 
-
+    public uint GetHealth()
+    {
+      return _aquaHealth;
+    }
     public uint HP
     {
       get { return _aquaHealth; }
@@ -54,7 +57,7 @@ public class Level2Behavior : MonoBehaviour
         return false;
       }
     }
-    
+
     void OnGUI()
     {
       GUIStyle myButtonStyle = new GUIStyle(GUI.skin.button);
