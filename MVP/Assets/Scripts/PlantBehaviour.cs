@@ -5,12 +5,12 @@ using UnityEngine;
 public class PlantBehaviour : MonoBehaviour
 {
     public Level2Behavior gameManager2;
-    public GameObject gameManager;
+    public level3behavior gameManager3;
     // Start is called before the first frame update
     void Start()
     {
         gameManager2 = GameObject.Find("GameManager").GetComponent<Level2Behavior>();
-        gameManager = GameObject.Find("GameManager");
+        gameManager3 = GameObject.Find("GameManager").GetComponent<level3behavior>();
     }
 
     // Update is called once per frame
@@ -22,6 +22,7 @@ public class PlantBehaviour : MonoBehaviour
         if(gameManager2.GetHealth() != 5)
         {
           Debug.LogFormat("destroy plant");
+          gameManager3.plantsKilled ++;
           Destroy(this.gameObject);
         }
       }
