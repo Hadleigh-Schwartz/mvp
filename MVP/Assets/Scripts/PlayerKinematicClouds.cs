@@ -4,8 +4,18 @@ using UnityEngine;
 
 public class PlayerKinematicClouds : MonoBehaviour
 {
-    Rigidbody2D rb;
+    private Rigidbody2D rb;
+    public Rigidbody2D RB {
+        get {return rb;}
+        set {rb = value;}
+    }
 
+    [SerializeField]
+    private bool canMove = true;
+    public bool CanMove {
+        get {return canMove;}
+        set {canMove = value;}
+    }
     public float speed;
 
     Vector2 direction;
@@ -22,8 +32,8 @@ public class PlayerKinematicClouds : MonoBehaviour
 
     public StateManager gameManager;
 
- 
-     
+
+
     // private SphereCollider col;
 
     // private Level2Behavior gameManager;
@@ -31,16 +41,22 @@ public class PlayerKinematicClouds : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        // col = GetComponent<SphereCollider>();    
+        // col = GetComponent<SphereCollider>();
     }
 
     void Update()
     {
-        direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        if(canMove == true)
+        {
+            direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        }
     }
+
+
 
     void FixedUpdate(){
         rb.MovePosition((Vector2)transform.position + (direction * speed * Time.fixedDeltaTime));
+        
 
 
         if (isEvaporating)
@@ -52,7 +68,7 @@ public class PlayerKinematicClouds : MonoBehaviour
                  currentLerpTime = lerpTime;
                  isEvaporating = false;
              }
- 
+
              //lerp
              float percentComplete = currentLerpTime / lerpTime;
              rb.MovePosition(Vector3.Lerp(startEvapPos, endEvapPos, percentComplete));
@@ -67,12 +83,12 @@ public class PlayerKinematicClouds : MonoBehaviour
                  currentLerpTime = lerpTime;
                  isCondensing = false;
              }
- 
+
              //lerp
              float percentComplete = currentLerpTime / lerpTime;
              rb.MovePosition(Vector3.Lerp(startCondPos, endCondPos, percentComplete));
          }
-        
+
 
 
     }
@@ -89,9 +105,9 @@ public class PlayerKinematicClouds : MonoBehaviour
             startCondPos = transform.position;
             endCondPos = new Vector2(transform.position.x, -10);
             isCondensing = true;
-            currentLerpTime = 0f; 
+            currentLerpTime = 0f;
         }
-       
+
     }
 
 
@@ -106,9 +122,9 @@ public class PlayerKinematicClouds : MonoBehaviour
             startEvapPos = transform.position;
             endEvapPos = new Vector2(transform.position.x, 18);
             isEvaporating = true;
-            currentLerpTime = 0f; 
+            currentLerpTime = 0f;
         }
-       
+
     }
 
 
