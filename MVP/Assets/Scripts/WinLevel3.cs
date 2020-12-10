@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class WinLevel3 : MonoBehaviour
 {
-  public Level2Behavior gameManager2;
+  public level3behavior gameManager2;
   void Start()
   {
-    gameManager2 = GameObject.Find("GameManager").GetComponent<Level2Behavior>();
+    gameManager2 = GameObject.Find("GameManager").GetComponent<level3behavior>();
   }
   void OnTriggerEnter2D(Collider2D other) {
     Debug.Log("entered");

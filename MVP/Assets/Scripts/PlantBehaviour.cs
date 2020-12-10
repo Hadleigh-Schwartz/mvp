@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlantBehaviour : MonoBehaviour
 {
-    public Level2Behavior gameManager2;
+
     public level3behavior gameManager3;
     // Start is called before the first frame update
     void Start()
     {
-        gameManager2 = GameObject.Find("GameManager").GetComponent<Level2Behavior>();
+    
         gameManager3 = GameObject.Find("GameManager").GetComponent<level3behavior>();
     }
 
@@ -19,7 +19,7 @@ public class PlantBehaviour : MonoBehaviour
       if (collision.gameObject.name == "Player")
       {
         Debug.LogFormat("plant collided with player");
-        if(gameManager2.GetHealth() != 5)
+        if(gameManager3.GetHealth() != 5)
         {
           Debug.LogFormat("destroy plant");
           gameManager3.plantsKilled ++;
