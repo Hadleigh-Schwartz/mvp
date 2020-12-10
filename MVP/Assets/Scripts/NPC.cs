@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class NPC : MonoBehaviour {
 
@@ -119,6 +120,14 @@ public class NPC : MonoBehaviour {
             //deactivate canvas
             dialoguePanel.SetActive(false);
             index = 0;
+
+            //if current scene is level 2, end of convo should trigger mini game
+            Scene m_Scene = SceneManager.GetActiveScene();
+            string sceneName = m_Scene.name;
+            
+            if(sceneName == "level2-cloud-intro"){
+                SceneManager.LoadScene("level2-cloud");
+            }
         }
     }
 }

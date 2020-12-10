@@ -10,7 +10,11 @@ public class WinLevel2 : MonoBehaviour {
     	Debug.Log(other);
         
         Debug.Log("success");
-        SceneManager.LoadScene("level2-cloud-finish");
+         if (other.gameObject.name == "Player")
+		  {
+		    SceneManager.LoadScene("level2-cloud-finish");
+		  }
+        
         
     }
 }

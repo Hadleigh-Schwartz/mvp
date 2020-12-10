@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/level2-cloud.unity
     guid: 7494f30acd79140e48977226c11ed3d3
+  - enabled: 1
+    path: Assets/Scenes/level2-cloud-finish.unity
+    guid: 03ba2582c9e0f4a24b73624a3a3f193e
   m_configObjects: {}

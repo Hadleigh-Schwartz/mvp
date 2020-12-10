@@ -7,7 +7,7 @@ public class Level2Behavior : MonoBehaviour
 {
     private uint _aquaHealth = 5;
 
-    public string labelText = "Avoid the SO2 molecules!";
+    public string labelText = "Avoid the SO2 molecules and get to the finish line!";
 
     public bool showWinScreen = false;
     public bool showLoseScreen = false;
@@ -57,10 +57,17 @@ public class Level2Behavior : MonoBehaviour
     
     void OnGUI()
     {
-      GUI.Box(new Rect(20,20,150,25), "Player Health: "+_aquaHealth);
+      GUIStyle myButtonStyle = new GUIStyle(GUI.skin.button);
+    myButtonStyle.fontSize = 30;
+      GUI.Box(new Rect(10,100,300,30), "Player Health: "+_aquaHealth, myButtonStyle);
       // GUI.Box(new Rect(20,50,150,25), "Goals Collected: "+_goalsCollected);
-      GUI.Label(new Rect(Screen.width/2 - 100, Screen.height - 50, 300, 50),
-        labelText);
+
+      GUIStyle guiStyle = new GUIStyle(); //create a new variable
+      guiStyle.fontSize = 35;
+      GUI.Label(new Rect(Screen.width/2 - 100, Screen.height - 100, 300, 50),
+        labelText, guiStyle);
+
+
       if(showWinScreen)
       {
         if(GUI.Button(new Rect(Screen.width/2 -100, Screen.height/2-50,200,100), "YOU WON!"))
