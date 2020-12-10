@@ -53,6 +53,7 @@ public class NPC : MonoBehaviour {
     }
     void OnTriggerEnter2D(Collider2D anyCollider)
     {
+        Debug.Log("hit");
         if(anyCollider.CompareTag("Player"))
         {
             ShowInteractPrompt = true;
