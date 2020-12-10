@@ -22,4 +22,11 @@ public class ButtonText : MonoBehaviour
         textField.text = "";
       }
     }
+    public void ShowHidePanel(GameObject panel, bool collected)
+    {
+      if(collected)
+      {
+
+      }
+    }
 }

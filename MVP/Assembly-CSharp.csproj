@@ -60,8 +60,6 @@
      <Compile Include="Assets\Scripts\ButtonText.cs" />
      <Compile Include="Assets\Scripts\EnemyBehavior.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
-     <Compile Include="Assets\Scripts\InventoryText.cs" />
-     <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\Level2Behavior.cs" />
      <Compile Include="Assets\Scripts\NPC.cs" />
      <Compile Include="Assets\Scripts\OscillateX.cs" />
