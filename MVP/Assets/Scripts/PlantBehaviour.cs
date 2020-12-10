@@ -14,7 +14,7 @@ public class PlantBehaviour : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionStay2D(Collision2D collision)
     {
       if (collision.gameObject.name == "Player")
       {
@@ -22,7 +22,7 @@ public class PlantBehaviour : MonoBehaviour
         if(gameManager2.GetHealth() != 5)
         {
           Debug.LogFormat("destroy plant");
-          Destroy(this);
+          Destroy(this.gameObject);
         }
       }
     }
