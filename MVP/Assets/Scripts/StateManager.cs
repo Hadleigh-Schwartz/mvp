@@ -18,7 +18,7 @@ public class StateManager : MonoBehaviour
 
     	 GUIStyle myButtonStyle = new GUIStyle(GUI.skin.button);
  		myButtonStyle.fontSize = 30;
-    	GUI.Box(new Rect(10,100,300,35), "Current state: "+ state, myButtonStyle);
+    	GUI.Box(new Rect(10,75,300,35), "Current state: "+ state, myButtonStyle);
 
     	// if(showErrorScreen == true){
     	// 	GUI.Button(new Rect(Screen.width/2 -100, Screen.height/2-50,330,100), "INCORRECT STATE CHANGE! Click here to continue");
