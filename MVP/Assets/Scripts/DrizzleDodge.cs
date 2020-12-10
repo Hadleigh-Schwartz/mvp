@@ -8,19 +8,20 @@ public class DrizzleDodge : MonoBehaviour {
     private int current = 0;
     public bool playerWasInRange = false;
     [SerializeField]
-    private float speed = 20;
-    [SerializeField]
     float WPradius = .1f;
 
     void Update()
     {
+        if(playerWasInRange == true)
+        {
+            MoveToWaypoint();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D anyCollider)
     {
         if(anyCollider.CompareTag("Player"))
         {
-            MoveToWaypoint();
             playerWasInRange = true;
         }
     }
