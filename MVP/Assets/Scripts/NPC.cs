@@ -1,45 +1,60 @@
-//Troubleshooting
-//1. Make sure it's all Collider2D, not Collider
-//2. Make sure this script is in an Empty as a child of the NPC, along with a collider2D that is marked "IsTrigger"
-//3. Make sure the player's tag is "Player"
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
-public class NPC : MonoBehaviour
-{
-    private PlayerKinematic player;
-    // public
-        //Get NPC's position and make the dialogue box appear above his head. Rigidbody2D position?
+public class NPC : MonoBehaviour {
 
-    public bool showInteractButton;
+    public bool ShowInteractPrompt;
     public bool playerInRange;
     public bool usingNPC;
     public bool showDialogue;
 
-    public Camera firstPersonCamera;
-    public Camera NPCCamera;
-    public Transform _audioListener;
+    public GameObject interactPrompt;
+    public GameObject dialoguePanel;
+    public TextMeshProUGUI textDisplay;
+    public GameObject continueButton;
+
+    public string[] dialogue;
+    private int index;
+    public float typingSpeed = 0.02f;
+
 
     void Start()
     {
-        showInteractButton = false;
+        interactPrompt.SetActive(false);
+
+        continueButton.SetActive(false);
+        dialoguePanel.SetActive(false);
+        // NPCPosition = transform.position;
+
+        StartCoroutine(Type());
     }
     void Update()
     {
-        //see if player has entered NPC area.
         TalkToNPC();
-    }
 
-    void OnTriggerEnter2D(Collider2D anyCollider)//But whose collider does this activate?? Whenever this object collides with ANY trigger
+        if(textDisplay.text == dialogue[index])
+        {
+            continueButton.SetActive(true);
+        }
+
+        if(ShowInteractPrompt == true)
+        {
+            interactPrompt.SetActive(true);
+        }
+        else
+        {
+            interactPrompt.SetActive(false);
+        }
+
+    }
+    void OnTriggerEnter2D(Collider2D anyCollider)
     {
-        //check that nothing is blocking the player, nothing is btwn them and the NPC with a Raycast
-            //playerInRange = true;
-        //have a graphical thing pop up to indicate to player they can press a button
         if(anyCollider.CompareTag("Player"))
         {
-            showInteractButton = true;
+            ShowInteractPrompt = true;
             playerInRange = true;
         }
     }
@@ -47,20 +62,20 @@ public class NPC : MonoBehaviour
     {
         if(anyCollider.CompareTag("Player"))
         {
-            showInteractButton = false;
+            ShowInteractPrompt = false;
             playerInRange = false;
         }
     }
     public void TalkToNPC()
     {
         //allow the player to press a button to talk to the NPC.
-        if(playerInRange == true && Input.GetKeyDown(KeyCode.E))
+        if(playerInRange == true && Input.GetKeyDown(KeyCode.E) && ShowInteractPrompt == true)
         {
-            showInteractButton = false;
+            ShowInteractPrompt = false;
             OpenDialogue();
             //SwitchCameras(firstPersonCamera, NPCCamera);
         }
-        if(usingNPC == true && playerInRange == false)
+        else if(usingNPC == true && playerInRange == false)
         {
             showDialogue = false;
             //SwitchCameras(NPCCamera, firstPersonCamera);
@@ -70,32 +85,41 @@ public class NPC : MonoBehaviour
     {
         usingNPC = true;
         showDialogue = true;
-        //disable walking?? How to
-        //player.canMove = false;
+        dialoguePanel.SetActive(true);
     }
-    //public void SwitchCameras(Camera fromCam, Camera toCam) //disable current camera and switch to another
-    // {
-    //     fromCam.enabled = false;
-    //     toCam.enabled = true;
-    //     _audioListener.parent = toCam.transform;
-    //     _audioListener.localPosition = Vector3.zero;
-    //     _audioListener.localRotation = Quaternion.identity;
-    // }
-    void OnGUI()
+
+    /*ACTUAL TYPING DIALOGUE
+    /*ACTUAL TYPING DIALOGUE
+    /*ACTUAL TYPING DIALOGUE
+    /*ACTUAL TYPING DIALOGUE
+    /*ACTUAL TYPING DIALOGUE*/
+    IEnumerator Type()
     {
-        if(showInteractButton == true)
+        foreach(char letter in dialogue[index].ToCharArray())
         {
-            GUI.Box(new Rect(Screen.width/2-80, Screen.height/2-100, Screen.width/2-220, Screen.height/2-220), "Press E to talk to the NPC.");
-        }
-        if(showDialogue == true)
-        {
-            GUI.Box(new Rect(Screen.width/4-50, Screen.height/4-50, Screen.width/4-100, Screen.height/2-100), "Hello, I'm NPC");
-            // if(Input.GetKeyDown(KeyCode.Escape))
-            // {
-            //     showDialogue = false;
-            //     SwitchCameras(NPCCamera, firstPersonCamera);
-            // }
+            textDisplay.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
         }
     }
-    //if player has crafting menu open, pressing "esc" or their assigned key will close it.
+    //when a player activates the dialogue, start the typing coroutine. Then, start it each time the player advances the dialogue
+
+    public void NextDialogue()
+    {
+        continueButton.SetActive(false);
+        if(index < dialogue.Length -1)
+        {
+            index++;
+            textDisplay.text = "";
+            StartCoroutine(Type());
+            Debug.Log("next dialogue");
+        }
+        else
+        {
+            textDisplay.text = "";
+            continueButton.SetActive(false);
+            //deactivate canvas
+            dialoguePanel.SetActive(false);
+            index = 0;
+        }
+    }
 }
