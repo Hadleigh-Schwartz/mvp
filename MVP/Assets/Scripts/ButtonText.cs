@@ -7,6 +7,8 @@ public class ButtonText : MonoBehaviour
 {
     public Text textField;
     public string textStr;
+    public GameObject acidPanel;
+    public GameObject normalPanel;
     public void SetText(string txt)
     {
       textStr += txt;
@@ -22,11 +24,23 @@ public class ButtonText : MonoBehaviour
         textField.text = "";
       }
     }
-    public void ShowHidePanel(GameObject panel, bool collected)
+    public void ShowHideAcidPanel(bool collected)
     {
       if(collected)
       {
-
+        acidPanel.SetActive(!acidPanel.active);
       }
+    }
+    public void ShowHideNormalPanel(bool collected)
+    {
+      if(collected)
+      {
+        normalPanel.SetActive(!normalPanel.active);
+      }
+    }
+    void Start()
+    {
+      acidPanel.SetActive(false);
+      normalPanel.SetActive(false);
     }
 }
