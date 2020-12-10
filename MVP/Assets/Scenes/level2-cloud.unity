@@ -1945,7 +1945,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   labelText: Avoid the SO2 molecules!
-  maxGoals: 4
   showWinScreen: 0
   showLoseScreen: 0
 --- !u!4 &1094739026
