@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/level1-puddle.unity
-    guid: babb500eee5bae94096af8fdb41e376a
-  - enabled: 1
     path: Assets/Scenes/Home.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/level1-puddle.unity
+    guid: babb500eee5bae94096af8fdb41e376a
   - enabled: 1
     path: Assets/Scenes/level2-cloud-intro.unity
     guid: 4ccde5c0dfb6244b797285fed951d5bb
@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/level2-cloud-finish.unity
     guid: 03ba2582c9e0f4a24b73624a3a3f193e
+  - enabled: 1
+    path: Assets/Scenes/level3.unity
+    guid: d2c84f5e94dc74b599045484572d503f
+  - enabled: 1
+    path: Assets/level3-intro.unity
+    guid: 52de41b02c38044e6959532865e6a36e
   m_configObjects: {}

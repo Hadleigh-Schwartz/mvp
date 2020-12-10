@@ -7,12 +7,15 @@ ScriptsOnlyBuild:
     - CutsceneDialogueScript
     - DrizzleDodge
     - EnemyBehavior
+    - EnemyBehavior3
     - EnterCloud
     - EnterLake
+    - EnterLevel3
     - EnterPuddle
     - Level2Behavior
     - Level2Instructions
     - NPC
+    - PlantBehaviour
     - PlayerKinematic
     - PlayerKinematicClouds
     - RandomMove
@@ -20,6 +23,8 @@ ScriptsOnlyBuild:
     - StateManager
     - TestButton
     - WinLevel2
+    - WinLevel3
+    - level3behavior
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
@@ -66,6 +71,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
     - Class: 60
@@ -91,17 +98,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12328}
     - Class: 114
+      Script: {instanceID: 12380}
+    - Class: 114
       Script: {instanceID: 12692}
     - Class: 114
       Script: {instanceID: 13288}
     - Class: 114
       Script: {instanceID: 13310}
     - Class: 114
+      Script: {instanceID: 13398}
+    - Class: 114
+      Script: {instanceID: 13416}
+    - Class: 114
       Script: {instanceID: 13820}
     - Class: 114
       Script: {instanceID: 14006}
     - Class: 114
       Script: {instanceID: 14036}
+    - Class: 114
+      Script: {instanceID: 14104}
     - Class: 114
       Script: {instanceID: 14442}
     - Class: 115
@@ -135,8 +150,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 49
-      Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
     - Class: 58
@@ -164,8 +177,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12328}
     - Class: 114
-      Script: {instanceID: 12380}
-    - Class: 114
       Script: {instanceID: 12692}
     - Class: 114
       Script: {instanceID: 12876}
@@ -174,8 +185,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13398}
     - Class: 114
-      Script: {instanceID: 13416}
-    - Class: 114
       Script: {instanceID: 13568}
     - Class: 114
       Script: {instanceID: 13718}
@@ -183,8 +192,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13820}
     - Class: 114
       Script: {instanceID: 14006}
-    - Class: 114
-      Script: {instanceID: 14104}
     - Class: 114
       Script: {instanceID: 14442}
     - Class: 115
@@ -392,6 +399,146 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13918}
     - Class: 114
       Script: {instanceID: 14296}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/level3.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 60
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11272}
+    - Class: 114
+      Script: {instanceID: 11296}
+    - Class: 114
+      Script: {instanceID: 11428}
+    - Class: 114
+      Script: {instanceID: 11502}
+    - Class: 114
+      Script: {instanceID: 11560}
+    - Class: 114
+      Script: {instanceID: 11562}
+    - Class: 114
+      Script: {instanceID: 11594}
+    - Class: 114
+      Script: {instanceID: 11648}
+    - Class: 114
+      Script: {instanceID: 12328}
+    - Class: 114
+      Script: {instanceID: 12394}
+    - Class: 114
+      Script: {instanceID: 12628}
+    - Class: 114
+      Script: {instanceID: 13820}
+    - Class: 114
+      Script: {instanceID: 13918}
+    - Class: 114
+      Script: {instanceID: 14442}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/level3-intro.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11272}
+    - Class: 114
+      Script: {instanceID: 11296}
+    - Class: 114
+      Script: {instanceID: 11502}
+    - Class: 114
+      Script: {instanceID: 11562}
+    - Class: 114
+      Script: {instanceID: 11594}
+    - Class: 114
+      Script: {instanceID: 11648}
+    - Class: 114
+      Script: {instanceID: 11870}
+    - Class: 114
+      Script: {instanceID: 12322}
+    - Class: 114
+      Script: {instanceID: 12328}
+    - Class: 114
+      Script: {instanceID: 12628}
+    - Class: 114
+      Script: {instanceID: 13398}
+    - Class: 114
+      Script: {instanceID: 13718}
+    - Class: 114
+      Script: {instanceID: 13820}
+    - Class: 114
+      Script: {instanceID: 13918}
+    - Class: 114
+      Script: {instanceID: 14442}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1085,9 +1232,11 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 2
   scenePathNames:
-  - Assets/Scenes/level1-puddle.unity
   - Assets/Scenes/Home.unity
+  - Assets/Scenes/level1-puddle.unity
   - Assets/Scenes/level2-cloud-intro.unity
   - Assets/Scenes/level2-cloud.unity
   - Assets/Scenes/level2-cloud-finish.unity
+  - Assets/Scenes/level3.unity
+  - Assets/level3-intro.unity
   playerPath: /Users/debutts/Documents/GitHub/mvp/SearchForDrizzle.app
