@@ -10,7 +10,11 @@ public class EnterCloud : MonoBehaviour {
     	Debug.Log(other);
         
         Debug.Log("success");
+        if (other.gameObject.name == "Player")
+      {
         SceneManager.LoadScene("level2-cloud-intro");
+      }
+        
         
     }
 }
